@@ -1,82 +1,402 @@
 [
     {
-        "input": "-25 -26",
+        "input": "-68 -87",
         "output": "A"
     },
     {
-        "input": "90 38",
-        "output": "A"
-    },
-    {
-        "input": "69 5",
-        "output": "A"
-    },
-    {
-        "input": "-17 29",
+        "input": "-43 24",
         "output": "B"
     },
     {
-        "input": "-21 18",
-        "output": "B"
-    },
-    {
-        "input": "-30 -64",
+        "input": "37 -58",
         "output": "A"
     },
     {
-        "input": "-9 48",
-        "output": "B"
-    },
-    {
-        "input": "77 -67",
+        "input": "-40 -87",
         "output": "A"
     },
     {
-        "input": "-14 -79",
+        "input": "81 -11",
         "output": "A"
     },
     {
-        "input": "18 25",
+        "input": "25 91",
         "output": "B"
     },
     {
-        "input": "-67 99",
+        "input": "57 88",
         "output": "B"
     },
     {
-        "input": "10 3",
+        "input": "93 -42",
         "output": "A"
     },
     {
-        "input": "-61 41",
-        "output": "B"
-    },
-    {
-        "input": "-65 49",
-        "output": "B"
-    },
-    {
-        "input": "-66 -93",
+        "input": "89 57",
         "output": "A"
     },
     {
-        "input": "10 -4",
+        "input": "50 0",
         "output": "A"
     },
     {
-        "input": "97 -48",
-        "output": "A"
-    },
-    {
-        "input": "76 -49",
-        "output": "A"
-    },
-    {
-        "input": "-40 22",
+        "input": "-17 75",
         "output": "B"
     },
     {
-        "input": "20 28",
+        "input": "83 58",
+        "output": "A"
+    },
+    {
+        "input": "-5 9",
         "output": "B"
+    },
+    {
+        "input": "69 -54",
+        "output": "A"
+    },
+    {
+        "input": "-44 36",
+        "output": "B"
+    },
+    {
+        "input": "-95 -16",
+        "output": "B"
+    },
+    {
+        "input": "15 -64",
+        "output": "A"
+    },
+    {
+        "input": "-20 -90",
+        "output": "A"
+    },
+    {
+        "input": "93 -80",
+        "output": "A"
+    },
+    {
+        "input": "50 -89",
+        "output": "A"
+    },
+    {
+        "input": "34 -90",
+        "output": "A"
+    },
+    {
+        "input": "-100 -14",
+        "output": "B"
+    },
+    {
+        "input": "98 7",
+        "output": "A"
+    },
+    {
+        "input": "76 79",
+        "output": "B"
+    },
+    {
+        "input": "-79 -13",
+        "output": "B"
+    },
+    {
+        "input": "90 -78",
+        "output": "A"
+    },
+    {
+        "input": "-64 50",
+        "output": "B"
+    },
+    {
+        "input": "16 17",
+        "output": "B"
+    },
+    {
+        "input": "-86 99",
+        "output": "B"
+    },
+    {
+        "input": "56 62",
+        "output": "B"
+    },
+    {
+        "input": "-44 -45",
+        "output": "A"
+    },
+    {
+        "input": "21 32",
+        "output": "B"
+    },
+    {
+        "input": "24 -87",
+        "output": "A"
+    },
+    {
+        "input": "92 3",
+        "output": "A"
+    },
+    {
+        "input": "31 49",
+        "output": "B"
+    },
+    {
+        "input": "19 53",
+        "output": "B"
+    },
+    {
+        "input": "-72 50",
+        "output": "B"
+    },
+    {
+        "input": "97 -41",
+        "output": "A"
+    },
+    {
+        "input": "-30 13",
+        "output": "B"
+    },
+    {
+        "input": "-83 -54",
+        "output": "B"
+    },
+    {
+        "input": "-78 41",
+        "output": "B"
+    },
+    {
+        "input": "95 4",
+        "output": "A"
+    },
+    {
+        "input": "56 -23",
+        "output": "A"
+    },
+    {
+        "input": "40 81",
+        "output": "B"
+    },
+    {
+        "input": "-13 64",
+        "output": "B"
+    },
+    {
+        "input": "-43 66",
+        "output": "B"
+    },
+    {
+        "input": "21 -79",
+        "output": "A"
+    },
+    {
+        "input": "-67 -63",
+        "output": "B"
+    },
+    {
+        "input": "-42 -14",
+        "output": "B"
+    },
+    {
+        "input": "-16 -13",
+        "output": "B"
+    },
+    {
+        "input": "65 14",
+        "output": "A"
+    },
+    {
+        "input": "-20 40",
+        "output": "B"
+    },
+    {
+        "input": "51 13",
+        "output": "A"
+    },
+    {
+        "input": "-87 -69",
+        "output": "B"
+    },
+    {
+        "input": "-3 73",
+        "output": "B"
+    },
+    {
+        "input": "69 -63",
+        "output": "A"
+    },
+    {
+        "input": "-28 26",
+        "output": "B"
+    },
+    {
+        "input": "-11 16",
+        "output": "B"
+    },
+    {
+        "input": "9 -53",
+        "output": "A"
+    },
+    {
+        "input": "45 -93",
+        "output": "A"
+    },
+    {
+        "input": "-67 -72",
+        "output": "A"
+    },
+    {
+        "input": "88 -11",
+        "output": "A"
+    },
+    {
+        "input": "52 -59",
+        "output": "A"
+    },
+    {
+        "input": "-41 42",
+        "output": "B"
+    },
+    {
+        "input": "-59 78",
+        "output": "B"
+    },
+    {
+        "input": "-40 -43",
+        "output": "A"
+    },
+    {
+        "input": "-59 -35",
+        "output": "B"
+    },
+    {
+        "input": "50 -82",
+        "output": "A"
+    },
+    {
+        "input": "29 98",
+        "output": "B"
+    },
+    {
+        "input": "66 -15",
+        "output": "A"
+    },
+    {
+        "input": "68 -94",
+        "output": "A"
+    },
+    {
+        "input": "100 -81",
+        "output": "A"
+    },
+    {
+        "input": "-64 15",
+        "output": "B"
+    },
+    {
+        "input": "-2 48",
+        "output": "B"
+    },
+    {
+        "input": "48 7",
+        "output": "A"
+    },
+    {
+        "input": "-63 -92",
+        "output": "A"
+    },
+    {
+        "input": "14 27",
+        "output": "B"
+    },
+    {
+        "input": "81 85",
+        "output": "B"
+    },
+    {
+        "input": "-18 74",
+        "output": "B"
+    },
+    {
+        "input": "-74 10",
+        "output": "B"
+    },
+    {
+        "input": "17 32",
+        "output": "B"
+    },
+    {
+        "input": "-81 84",
+        "output": "B"
+    },
+    {
+        "input": "80 4",
+        "output": "A"
+    },
+    {
+        "input": "26 7",
+        "output": "A"
+    },
+    {
+        "input": "-66 11",
+        "output": "B"
+    },
+    {
+        "input": "-95 5",
+        "output": "B"
+    },
+    {
+        "input": "-61 -21",
+        "output": "B"
+    },
+    {
+        "input": "39 -27",
+        "output": "A"
+    },
+    {
+        "input": "10 2",
+        "output": "A"
+    },
+    {
+        "input": "63 57",
+        "output": "A"
+    },
+    {
+        "input": "61 -51",
+        "output": "A"
+    },
+    {
+        "input": "-17 32",
+        "output": "B"
+    },
+    {
+        "input": "-29 73",
+        "output": "B"
+    },
+    {
+        "input": "-96 -50",
+        "output": "B"
+    },
+    {
+        "input": "-90 -49",
+        "output": "B"
+    },
+    {
+        "input": "-27 38",
+        "output": "B"
+    },
+    {
+        "input": "68 -53",
+        "output": "A"
+    },
+    {
+        "input": "-91 36",
+        "output": "B"
+    },
+    {
+        "input": "39 -42",
+        "output": "A"
+    },
+    {
+        "input": "-58 -65",
+        "output": "A"
     }
 ]

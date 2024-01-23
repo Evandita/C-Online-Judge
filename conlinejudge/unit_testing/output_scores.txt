@@ -1,1 +1,1 @@
-Result: 11 out of 20 tests passed = 55.00000000000001%
+Result: 100 out of 100 tests passed = 100.00%

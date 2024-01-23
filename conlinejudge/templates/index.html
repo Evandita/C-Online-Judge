@@ -22,20 +22,19 @@
             border-radius: 10px;
         }
 
+        #leftColumn h3 {
+            text-align: center;
+        }
+
+        #leftColumn p {
+            text-align: justify;
+        }
+
         #rightColumn {
             width: 50%;
             position: relative;
             background-color: #fff;
             border-radius: 10px;
-        }
-
-        #lineSeparator {
-            position: absolute;
-            top: 20px;
-            bottom: 20px;
-            left: 0;
-            width: 2px;
-            background-color: #ccc;
         }
 
         #codeForm {
@@ -52,7 +51,7 @@
         textarea {
             width: 100%;
             max-width: 100%; /* Added max-width to ensure the textarea stays inside the right column */
-            height: 250px;
+            height: 400px;
             margin-bottom: 10px;
             box-sizing: border-box;
         }
@@ -60,23 +59,25 @@
         #output {
             margin: 20px;
             border: 1px solid #ccc;
-            padding: 10px;
-            white-space: pre-wrap;
+            padding: 10px; /* Keep padding if needed */
+            white-space: nowrap; /* Prevent line breaks */
+            overflow-x: auto; /* Add horizontal scrollbar if content overflows */
             border-radius: 10px;
-            overflow: hidden;
             position: relative;
-            max-height: 150px; /* Adjust the maximum height as needed */
+            height: 400px;
+        }
+        
+        #outputText {
+            padding-left: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-bottom:20px;
+            width: 100%;
         }
 
         #outputTitle {
             padding-left: 20px;
-        }
-
-        #outputText {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
         }
 
         #submitBtn {
@@ -87,14 +88,94 @@
             border: none;
             border-radius: 5px;
         }
+
+        #testCaseTable {
+            border-collapse: collapse;
+            width: 100%;
+        }
+    
+        #testCaseTable tbody th, #testCaseTable tbody td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        #testCaseTable thead th, #testCaseTable thead td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+        }
+
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var codeTextarea = document.getElementById('code');
+
+            codeTextarea.addEventListener('keydown', function(e) {
+                if (e.key === 'Tab') {
+                    e.preventDefault();
+
+                    // Insert a tab character at the current cursor position
+                    var start = this.selectionStart;
+                    var end = this.selectionEnd;
+
+                    // Set the new textarea value
+                    this.value = this.value.substring(0, start) + '\t' + this.value.substring(end);
+
+                    // Move the cursor to the right of the inserted tab
+                    this.selectionStart = this.selectionEnd = start + 1;
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 
     <div id="leftColumn">
-        <h2>Coding Problem</h2>
-        <p>Write a C program to...</p>
-        <!-- Add the problem description here -->
+        <h2>Code Problem</h2>
+        <h3>Case Study Part 1 Modul 2</h3>
+        <p>
+            Pak Diluc ditawarkan 2 lahan (A dan B) berbentuk persegi dengan harga yang sama. Pak Diluc hanya diberitahukan panjang sisi dari masing-masing lahan oleh penjual. Bantulah Pak Diluc untuk memilih lahan mana yang lebih menguntungkan bagi Pak Diluc. (Asumsikan lebih besar luas lahannya lebih beruntung).
+            <br><br><br>
+            <b>Format Input:</b>
+            <ul>
+            <li>Barisan pertama berisi panjang Lahan A</li>
+            <li>Barisan kedua berisi panjang Lahan B</li>
+            </ul>
+            <br>
+            <b>Format Output:</b>
+            <ul>
+                <li>Program mencetak Lahan mana yang lebih Luas. Apabila luas dari kedua lahan sama besar, cukup tampilkan “BEBAS”.</li>
+            </ul>
+            <br>
+            <!-- Test Case Table -->
+            <p><b>Test Case</b></p>
+            <div style="overflow-x: auto;">
+                <table id="testCaseTable">
+                    <thead>
+                        <tr>
+                            <th>Input</th>
+                            <th>Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10<br>2</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>3<br>6</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>5<br>5</td>
+                            <td>BEBAS</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </p>
     </div>
 
     <div id="rightColumn">
@@ -104,14 +185,30 @@
             <form action="" method="post">
                 {% csrf_token %}
                 <label for="code">Your C Code:</label>
-                <textarea id="code" name="code" required></textarea>
+                <textarea id="code" name="code" placeholder="Write your C program here..." required>{{code}}</textarea>
 
                 <button id="submitBtn" type="submit">Submit Code</button>
             </form>
         </div>
         <h2 id="outputTitle">Output</h2>
         <div id="output">
-            <pre id="outputText">{{output}}</pre>
+            <pre id="outputText"><b>{{output}}</b></pre>
+            <br>
+            {% for result in results %}
+            {% if result.passed %}
+            <pre style="color:green;">
+            Test {{result.num}} Passed - Execution Time: {{result.time_taken|floatformat:5}}s
+            Input: {{result.input_data}}
+            Actual Output: {{result.actual_output}}
+            Expected Output: {{result.expected_output}}</pre>
+            {% else %}
+            <pre style="color:red;">
+            Test {{result.num}} Failed - Execution Time: {{result.time_taken|floatformat:5}}s
+            Input: {{result.input_data}}
+            Actual Output: {{result.actual_output}}
+            Expected Output: {{result.expected_output}}</pre>
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
 </body>
