@@ -1,0 +1,82 @@
+[
+    {
+        "input": "-25 -26",
+        "output": "A"
+    },
+    {
+        "input": "90 38",
+        "output": "A"
+    },
+    {
+        "input": "69 5",
+        "output": "A"
+    },
+    {
+        "input": "-17 29",
+        "output": "B"
+    },
+    {
+        "input": "-21 18",
+        "output": "B"
+    },
+    {
+        "input": "-30 -64",
+        "output": "A"
+    },
+    {
+        "input": "-9 48",
+        "output": "B"
+    },
+    {
+        "input": "77 -67",
+        "output": "A"
+    },
+    {
+        "input": "-14 -79",
+        "output": "A"
+    },
+    {
+        "input": "18 25",
+        "output": "B"
+    },
+    {
+        "input": "-67 99",
+        "output": "B"
+    },
+    {
+        "input": "10 3",
+        "output": "A"
+    },
+    {
+        "input": "-61 41",
+        "output": "B"
+    },
+    {
+        "input": "-65 49",
+        "output": "B"
+    },
+    {
+        "input": "-66 -93",
+        "output": "A"
+    },
+    {
+        "input": "10 -4",
+        "output": "A"
+    },
+    {
+        "input": "97 -48",
+        "output": "A"
+    },
+    {
+        "input": "76 -49",
+        "output": "A"
+    },
+    {
+        "input": "-40 22",
+        "output": "B"
+    },
+    {
+        "input": "20 28",
+        "output": "B"
+    }
+]
