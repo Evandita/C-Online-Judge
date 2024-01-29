@@ -1,6 +1,7 @@
 FROM django
 EXPOSE 8000
-WORKDIR /app
-COPY . /app
+RUN mkdir -p /user/src/app-onlinejudge
+WORKDIR /user/src/app-onlinejudge
 RUN pip install -r requirements.txt
-CMD ["python3", "conlinejudge\manage.py", "runserver"]
+RUN cd conlinejudge
+CMD ["python", "manage.py", "runserver"]  
