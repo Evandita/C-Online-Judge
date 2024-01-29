@@ -3,4 +3,5 @@ EXPOSE 8000
 WORKDIR /app
 COPY . /app
 RUN ls
-CMD ["python", "onlinejudge/manage.py", "runserver"]  
+RUN cd conlinejudge
+CMD ["python", "manage.py", "runserver"]  
